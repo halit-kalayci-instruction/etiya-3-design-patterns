@@ -10,7 +10,7 @@ import org.example.structural.facade.services.ProductService;
 public class Main {
     public static void main(String[] args) {
         CrossCuttingConcernFacade crossCuttingConcernFacade = new CrossCuttingConcernFacade(new Logging(), new Caching(), new Authorization());
-        
+
         ProductService productService = new ProductManager(crossCuttingConcernFacade);
         productService.save();
 
